@@ -29,8 +29,46 @@
         </div>
     </nav>
 
-    <script src="<?php echo  get_stylesheet_directory_uri() . '/js/bootstrap.min.js' ?>"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                    <h5 class="card-title">Blog Posts</h5>
+                    <?php if(have_posts()): ?>
+                        <?php while(have_posts()):  the_post(); ?>
+                        <div class="row">
+                            <div class="col-md-3">
+                            Image Here</div>
+                            <div class="col-md-9">
+                                <h2><?php echo the_title(); ?></h2>
+                            </div>
+                        </div>
+                    <?php 
+                        endwhile; 
+                    endif;
+                    ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                    <?php if(is_active_sidebar('sidebar')): ?>
+                        <?php dynamic_sidebar('sidebar');  ?>
+                    <?php endif; ?>
+            </div>
+        </div>
+    </div>
     
+    <hr>
+
+    <footer class="container">
+        <p>&copy; <?php the_date('Y') . ' ' . bloginfo('site_name'); ?> </p>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="<?php echo  get_stylesheet_directory_uri() . '/js/bootstrap.min.js' ?>"></script>
+
     <?php wp_footer(); ?>
 </body>
 </html>
