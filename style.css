@@ -5,3 +5,31 @@
     Description: Simple Bootstrap theme for Wordpress
     Version: 1.0.0
 */
+
+a, a:hover, v:visited {
+    text-decoration: none;
+}
+
+nav {
+    margin-bottom: 30px
+}
+
+.post {
+    margin-bottom: 10px;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    background: #f2f2f2;
+    padding: 10px;
+}
+
+.post-no-thumbnail {
+    background: cornsilk;
+    padding: 20px;
+    margin-bottom: 30px
+}
