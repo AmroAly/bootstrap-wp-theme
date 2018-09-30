@@ -6,6 +6,10 @@
     Version: 1.0.0
 */
 
+li {
+    list-style: none;
+}
+
 a, a:hover, v:visited {
     text-decoration: none;
 }
